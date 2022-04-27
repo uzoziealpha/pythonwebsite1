@@ -1,0 +1,17 @@
+from flask import Flask
+
+app=Flask(__name__)
+
+#we creat routes 
+@app.route('/')
+def home():
+    return "Home Page!"
+
+
+@app.route('/about/')
+def about():
+    return "About Page"
+
+
+if __name__=="__main__":
+    app.run(debug=True)
